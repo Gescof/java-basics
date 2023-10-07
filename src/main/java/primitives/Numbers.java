@@ -22,7 +22,7 @@ public class Numbers {
         // Prints in a new line variable 'x'
         System.out.println("x: " + x);
 
-        // Prints in a new line variable 'x', then incrementing it by 1
+        // Prints in a new line variable 'x', then increments it by 1
         System.out.println("x++: " + x++);
 
         // Prints in a new line variable 'x', which was incremented by 1,
@@ -59,8 +59,9 @@ public class Numbers {
         // Defines decimal variable as float type named 'x' and sets initial value to 3.
         // A float contains a decimal representation of maximum 32 bits
         float x = 3f;
+
         // Defines double variable named 'y' and sets initial value to 4.5.
-        // A float contains a decimal representation of maximum 64 bits
+        // A double contains a decimal representation of maximum 64 bits
         double y = 4.5;
 
         // Prints in a new line addition of variables 'x' and 'y'
@@ -73,7 +74,7 @@ public class Numbers {
         System.out.println("x * y: " + (x * y));
 
         // Prints in a new line division of variables 'y' and 'x'.
-        // Note that the output result is another integer value
+        // Note that the output result is a double type, since double has more bits to store value than float
         System.out.println("y / x: " + (y / x));
     }
 }
