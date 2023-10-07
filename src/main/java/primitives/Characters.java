@@ -1,5 +1,7 @@
 package main.java.primitives;
 
+import main.java.Commons;
+
 /**
  * This represents characters as primitive and String variables and values of Java.
  */
@@ -11,8 +13,7 @@ public class Characters {
      * Types of characters and operations with them.
      */
     public static void firstTest() {
-        System.out.println();
-        System.out.println("----------------------");
+        Commons.printInitialLines();
         System.out.println("First test of Characters");
 
         // Defines char variable named 'x' and sets initial value to 'a'.
@@ -36,8 +37,7 @@ public class Characters {
      * String class and operations with it.
      */
     public static void secondTest() {
-        System.out.println();
-        System.out.println("----------------------");
+        Commons.printInitialLines();
         System.out.println("Second test of Characters");
 
         // Defines variable as String type named 'x' and sets initial value. A String represents character strings.

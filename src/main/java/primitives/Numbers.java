@@ -1,5 +1,7 @@
 package main.java.primitives;
 
+import main.java.Commons;
+
 /**
  * This represents numbers as primitive variables and values of Java.
  */
@@ -11,8 +13,7 @@ public class Numbers {
      * Types of integers and operations with them.
      */
     public static void firstTest() {
-        System.out.println();
-        System.out.println("----------------------");
+        Commons.printInitialLines();
         System.out.println("First test of Numbers");
 
         // Defines int variable named 'x' and sets initial value to 0.
@@ -52,8 +53,7 @@ public class Numbers {
      * Types of decimal variables and operations with them.
      */
     public static void secondTest() {
-        System.out.println();
-        System.out.println("----------------------");
+        Commons.printInitialLines();
         System.out.println("Second test of Numbers");
 
         // Defines decimal variable as float type named 'x' and sets initial value to 3.
