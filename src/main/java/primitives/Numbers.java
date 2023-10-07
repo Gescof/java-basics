@@ -11,6 +11,7 @@ public class Numbers {
      * Types of integers and operations with them.
      */
     public static void firstTest() {
+        System.out.println();
         System.out.println("----------------------");
         System.out.println("First test of Numbers");
 
@@ -51,6 +52,7 @@ public class Numbers {
      * Types of decimal variables and operations with them.
      */
     public static void secondTest() {
+        System.out.println();
         System.out.println("----------------------");
         System.out.println("Second test of Numbers");
 
