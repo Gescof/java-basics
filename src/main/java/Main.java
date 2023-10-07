@@ -1,11 +1,11 @@
 package main.java;
 
-import main.java.primitives.Integers;
+import main.java.primitives.Numbers;
 
 public class Main {
 
     public static void main(String[] args) {
-        Integers.firstTest();
-        Integers.secondTest();
+        Numbers.firstTest();
+        Numbers.secondTest();
     }
 }
