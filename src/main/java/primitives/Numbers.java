@@ -64,8 +64,8 @@ public class Numbers {
         // Prints in a new line addition of variables 'x' and 'y'
         System.out.println("x + y: " + (x + y));
 
-        // A subtraction cannot be done to a double type
-        // System.out.println("x - y: " + x - y);
+        // Prints in a new line subtraction of variables 'x' and 'y'
+         System.out.println("x - y: " + (x - y));
 
         // Prints in a new line multiplication of variables 'x' and 'y'
         System.out.println("x * y: " + (x * y));
