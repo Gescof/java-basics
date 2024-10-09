@@ -3,58 +3,61 @@ package main.java.primitives;
 import main.java.Commons;
 
 /**
- * This represents characters as primitive and String variables and values of Java.
+ * This class represents characters as primitive and String variables and values of Java.
  */
 public class Characters {
+
     private Characters() {
+    } // Private constructor to prevent instantiation
+
+    /**
+     * Demonstrates the usage of character types and their operations.
+     */
+    public static void demonstrateCharacterTypes() {
+        Commons.printTestHeader("Demonstrating Character Types");
+
+        // Define character variables
+        char charVariable = 'a';
+        String stringVariable = "This is a String";
+
+        // Perform operations and print results
+        printCharacterOperations(charVariable);
+        printStringOperations(stringVariable);
     }
 
     /**
-     * Types of characters and operations with them.
+     * Prints the results of character operations.
+     *
+     * @param charVariable the char variable
      */
-    public static void firstTest() {
-        Commons.printInitialLines();
-        System.out.println("First test of Characters");
+    private static void printCharacterOperations(char charVariable) {
+        System.out.println("Character Operations:");
+        System.out.println("charVariable: " + charVariable);
+        System.out.println("Incremented charVariable: " + ++charVariable);
 
-        // Defines char variable named 'x' and sets initial value to 'a'.
-        // A char contains a character representation of maximum 16 bits
-        char x = 'a';
-
-        // Prints in a new line variable 'x'
-        System.out.println("x: " + x);
-
-        // Prints in a new line variable 'x', which is incremented by 1.
-        // In char, this means that the character printed will be the next in position following UTF-16 code units
-        System.out.println("++x: " + ++x);
-
-        // It is possible to store an integer value in a char type.
-        // This is because a char contains an unsigned integer (positive integer) that represents a UTF-16 code unit
-        char y = 64;
-        System.out.println("y: " + y);
+        // Store an integer value in a char type
+        char integerStoredInChar = 64;
+        System.out.println("Integer stored in char: " + integerStoredInChar);
     }
 
     /**
-     * String class and operations with it.
+     * Prints the results of string operations.
+     *
+     * @param stringVariable the string variable
      */
-    public static void secondTest() {
-        Commons.printInitialLines();
-        System.out.println("Second test of Characters");
+    private static void printStringOperations(String stringVariable) {
+        System.out.println("String Operations:");
+        System.out.println("stringVariable: " + stringVariable);
 
-        // Defines variable as String type named 'x' and sets initial value. A String represents character strings.
-        // All string literals in Java are implemented as instances of this class
-        String x = "This is a String";
-        System.out.println("String x: " + x);
+        // Define a string as an array of characters
+        char[] charArray = new char[]{'a', 'b', 'c'};
+        System.out.println("charArray: " + new String(charArray));
 
-        // A String could be defined as an array of characters, since each character of a string is a char.
-        // You could represent a string as follows
-        char[] y = new char[]{'a', 'b', 'c'};
-        System.out.println(y);
-
-        // The String class has methods of utility
-        System.out.println("x to upper case: " + x.toUpperCase());
-        System.out.println("x to lower case: " + x.toLowerCase());
-        System.out.println("x replace 's' with '&': " + x.replace("s", "&"));
-        System.out.println("x character at index 1: " + x.charAt(1));
-        System.out.println("x substring from index 1: " + x.substring(1));
+        // Perform string operations
+        System.out.println("stringVariable to upper case: " + stringVariable.toUpperCase());
+        System.out.println("stringVariable to lower case: " + stringVariable.toLowerCase());
+        System.out.println("stringVariable replace 's' with '&': " + stringVariable.replace("s", "&"));
+        System.out.println("stringVariable character at index 1: " + stringVariable.charAt(1));
+        System.out.println("stringVariable substring from index 1: " + stringVariable.substring(1));
     }
 }

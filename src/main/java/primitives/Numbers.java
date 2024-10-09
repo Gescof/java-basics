@@ -3,78 +3,81 @@ package main.java.primitives;
 import main.java.Commons;
 
 /**
- * This represents numbers as primitive variables and values of Java.
+ * This class represents numbers as primitive variables and values of Java.
  */
 public class Numbers {
+
     private Numbers() {
+    } // Private constructor to prevent instantiation
+
+    /**
+     * Demonstrates the usage of different integer types and their operations.
+     */
+    public static void demonstrateIntegerTypes() {
+        Commons.printTestHeader("Demonstrating Integer Types");
+
+        // Define integer variables
+        int intVariable = 0;
+        byte byteVariable = 9;
+        short shortVariable = 123;
+        long longVariable = 9876;
+
+        // Perform operations and print results
+        printIntegerOperations(intVariable, byteVariable, shortVariable, longVariable);
     }
 
     /**
-     * Types of integers and operations with them.
+     * Demonstrates the usage of decimal variables and their operations.
      */
-    public static void firstTest() {
+    public static void demonstrateDecimalTypes() {
         Commons.printInitialLines();
-        System.out.println("First test of Numbers");
+        System.out.println("Demonstrating Decimal Types");
 
-        // Defines int variable named 'x' and sets initial value to 0.
-        // An int contains an integer representation of maximum 32 bits
-        int x = 0;
+        // Define decimal variables
+        float floatVariable = 3f;
+        double doubleVariable = 4.5;
 
-        // Prints in a new line variable 'x'
-        System.out.println("x: " + x);
+        // Perform operations and print results
+        printDecimalOperations(floatVariable, doubleVariable);
+    }
 
-        // Prints in a new line variable 'x', then increments it by 1
-        System.out.println("x++: " + x++);
+    /**
+     * Prints the results of integer operations.
+     *
+     * @param intVariable   the int variable
+     * @param byteVariable  the byte variable
+     * @param shortVariable the short variable
+     * @param longVariable  the long variable
+     */
+    private static void printIntegerOperations(int intVariable, byte byteVariable, short shortVariable, long longVariable) {
+        System.out.println("Integer Operations:");
+        System.out.println("intVariable: " + intVariable);
+        System.out.println("byteVariable: " + byteVariable);
+        System.out.println("shortVariable: " + shortVariable);
+        System.out.println("longVariable: " + longVariable);
 
-        // Prints in a new line variable 'x', which was incremented by 1,
-        // and it is incremented here by 1 before printed again
-        System.out.println("++x: " + ++x);
-
-        // Other types of integers representations.
-        // -> byte represents an integer of maximum 8 bits
-        // -> short represents an integer of maximum 16 bits
-        // -> long represents an integer of maximum 64 bits
-        byte y = 9;
-        short z = 123;
-        long w = 9876;
-
-        // It is possible to concatenate operations between these types and represent the result as another type.
-        // Beware this could lead to "Overflow" or "Underflow" errors if the result is too big or too small
-        // to be represented by the variable. For example, trying to represent a 16 bits integer in a byte (8 bits)
-        int result = (int) (y - z + w);
-        System.out.println("y - z + w: " + result);
-
-        // Finally, we may want to concatenate operations as follows
+        // Perform and print additional operations
+        int result = (int) (byteVariable - shortVariable + longVariable);
+        System.out.println("byteVariable - shortVariable + longVariable: " + result);
         result -= (result + 1) * 2;
         System.out.println("result: " + result);
     }
 
     /**
-     * Types of decimal variables and operations with them.
+     * Prints the results of decimal operations.
+     *
+     * @param floatVariable  the float variable
+     * @param doubleVariable the double variable
      */
-    public static void secondTest() {
-        Commons.printInitialLines();
-        System.out.println("Second test of Numbers");
+    private static void printDecimalOperations(float floatVariable, double doubleVariable) {
+        System.out.println("Decimal Operations:");
+        System.out.println("floatVariable: " + floatVariable);
+        System.out.println("doubleVariable: " + doubleVariable);
 
-        // Defines decimal variable as float type named 'x' and sets initial value to 3.
-        // A float contains a decimal representation of maximum 32 bits
-        float x = 3f;
-
-        // Defines double variable named 'y' and sets initial value to 4.5.
-        // A double contains a decimal representation of maximum 64 bits
-        double y = 4.5;
-
-        // Prints in a new line addition of variables 'x' and 'y'
-        System.out.println("x + y: " + (x + y));
-
-        // Prints in a new line subtraction of variables 'x' and 'y'
-         System.out.println("x - y: " + (x - y));
-
-        // Prints in a new line multiplication of variables 'x' and 'y'
-        System.out.println("x * y: " + (x * y));
-
-        // Prints in a new line division of variables 'y' and 'x'.
-        // Note that the output result is a double type, since double has more bits to store value than float
-        System.out.println("y / x: " + (y / x));
+        // Perform and print additional operations
+        System.out.println("floatVariable + doubleVariable: " + (floatVariable + doubleVariable));
+        System.out.println("floatVariable - doubleVariable: " + (floatVariable - doubleVariable));
+        System.out.println("floatVariable * doubleVariable: " + (floatVariable * doubleVariable));
+        System.out.println("doubleVariable / floatVariable: " + (doubleVariable / floatVariable));
     }
 }
